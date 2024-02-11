@@ -1,0 +1,50 @@
+num1 = input("Enter the value 1 : ")
+num2 = input("Enter the value 2 : ")
+
+N1 = int(num1)
+N2 = int(num2)
+
+class mathes:
+    def addition(a,b):
+        return a+b
+    def substraction(a,b):
+        return a-b
+    def multiplication(a,b):
+        return a*b
+    def division(a,b):
+        if b == 0:
+            return "Division by zero is invalid"
+        quotient = a//b
+        reminder = a%b
+        return (quotient,reminder)
+    def percentage(a,b):
+        return (a/b)*100
+m = mathes
+
+def main():
+    
+    print("Mathematical Operations")
+    print(" 1.Addition")
+    print(" 2.Substraction")
+    print(" 3.Multiplication")
+    print(" 4.Division")
+    print(" 5.Percentage")
+    
+    options = input("Enter your option (1 - 5) : ")
+    if options not in ["1","2","3","4","5"]:
+        print("Invalid Option")
+        return
+    elif options == "1":
+        print("Addition : ",m.addition(N1,N2))
+    elif options == "2":
+        print("Substraction : ",m.substraction(N1,N2))
+    elif options == "3":
+        print("Multiplication : ",m.multiplication(N1,N2))
+    elif options == "4":
+        
+        print("Division : ",m.division(N1,N2))
+    elif options == "5":
+        print("Percentage : ",m.percentage(N1,N2))
+        15
+if __name__ == "__main__":
+    main()
